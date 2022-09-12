@@ -94,7 +94,7 @@ pipeline{
     }
     stage('End of Pipeline'){
       steps{
-        echo "end of distributed jenkins job"
+        echo "end of distributed jenkins pipeline"
       }
     }
   } 
