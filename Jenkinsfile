@@ -7,7 +7,7 @@ pipeline{
   stages{
         stage('Clone Repository'){
           steps{
-            checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'github-id', url: 'https://github.com/etechteam3group5/multibranch-job.git']]])
+            checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'github-id', url: 'https://github.com/etechteam3group5/distributed-build.git']]])
           }
         }
     stage('parallel-level1'){
