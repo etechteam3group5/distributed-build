@@ -28,12 +28,12 @@ pipeline{
         }
       }
     }
-        stage('parallel-leve2'){
-          agent {
+    agent {
             label {
               label'slave2'
             }
           }
+        stage('parallel-leve2'){
       parallel{
         stage('Chizoba'){
           steps{
@@ -51,12 +51,12 @@ pipeline{
         }
       }
     }
-        stage('parallel-level3'){
-          agent {
+    agent {
             label {
               label'slave3'
             }
           }
+        stage('parallel-level3'){
       parallel{
         stage('Gregory'){
           steps{
@@ -94,7 +94,7 @@ pipeline{
     }
     stage('End of Pipeline'){
       steps{
-        echo "end of distributed jenkins pipeline"
+        echo "end of parallel job"
       }
     }
   } 
